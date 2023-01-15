@@ -50,10 +50,6 @@ from imblearn.over_sampling import SMOTE
 import warnings
 warnings.filterwarnings('ignore')
 
-headers = {'Accept': 'application/json'}
-r = requests.get("https://zhiyao01-dmproject-dmproject-38kusx.streamlit.app", headers=headers)
-st.write(r.text)
-
 st.header("Project")
 
 st.subheader("Project Members:")
@@ -136,7 +132,7 @@ st.header("Check for null values:")
 
 st.write(df.isna().sum())
 
-st.write("The solution implemented is to fill in missing values with the mean or median of the column, for numerical and categorical data, respectively.")
+st.write("The solution implemented is to fill in missing values with the mean or mode of the column, for numerical and categorical data, respectively.")
 
 timespent_mean = df['TimeSpent_minutes'].mean()
 df['TimeSpent_minutes'] = df['TimeSpent_minutes'].fillna(value=timespent_mean)
