@@ -50,7 +50,8 @@ from imblearn.over_sampling import SMOTE
 import warnings
 warnings.filterwarnings('ignore')
 
-data = requests.get("https://zhiyao01-dmproject-dmproject-38kusx.streamlit.app").json()
+headers = {'Accept': 'application/json'}
+data = requests.get("https://zhiyao01-dmproject-dmproject-38kusx.streamlit.app", headers=headers).json()
 st.write(data)
 
 st.header("Project")
