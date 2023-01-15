@@ -51,7 +51,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 headers = {'Accept': 'application/json'}
-data = requests.get("https://zhiyao01-dmproject-dmproject-38kusx.streamlit.app", headers=headers).json()
+r = requests.get("https://zhiyao01-dmproject-dmproject-38kusx.streamlit.app", headers=headers)
+data = r.json()
 st.write(data)
 
 st.header("Project")
