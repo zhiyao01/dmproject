@@ -7,6 +7,7 @@
 
 import streamlit as st
 import altair as alt
+import requests
 
 import matplotlib.pyplot as plt
 import seaborn as sns
